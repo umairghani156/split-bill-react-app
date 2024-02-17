@@ -1,23 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {useState} from "react";
+import { Cards } from './components/Cards';
+import { SplitBill } from './components/SplitBalance';
 function App() {
+  const [addFriend, setAddFriend] = useState(false);
+  const [name , setName]  = useState("");
+  const [totalBill, setTotalBill] = useState(0)
+  const [myExpense, setMyExpense] = useState(0)
+  const [userExpense, setUserExpense] = useState(0)
+  const [payingBill, setPayingBill] = useState(0);
+  const [cardsData, setCardsData] = useState([
+    {
+      userImg: "https://tse3.mm.bing.net/th?id=OIP.uTthCkWr5Xb9l9TuXgnxJAHaE8&pid=Api&P=0&h=220",
+      userName: "Umair",
+      desc: "Clear right now",
+      price: 20,
+      isActive: false
+    },
+   
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:"flex", justifyContent:"center"}}>
+    <div className='IsCardsParent'>
+      <Cards cardsData= {cardsData} setCardsData={setCardsData} addFriend={addFriend} setAddFriend={setAddFriend} name={name} setName={setName}
+      totalBill={totalBill}
+      setTotalBill={setTotalBill}
+      myExpense={myExpense}
+      setMyExpense={setMyExpense}
+      userExpense={userExpense}
+      setUserExpense={setUserExpense}
+      payingBill={payingBill}
+      setPayingBill={setPayingBill}/>
+      
+    </div>
     </div>
   );
 }

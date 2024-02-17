@@ -1,0 +1,33 @@
+.cardsParent{
+   
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.card1{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card2{
+    width: 50%;
+display: flex;
+justify-content: center;
+}
+.singleUser{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.splitBillPar2{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    background-color: #fcf2e0;
+    padding: 10px;
+    
+}
